@@ -1,0 +1,109 @@
+- name: Home
+  # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+  # hide-desktop-navigation: true
+  columns:
+    - size: small
+      widgets:
+        - type: search
+          search-engine: https://search.irfansp.dev/search?q={QUERY}
+        
+        - type: to-do
+      
+        - type: calendar
+          first-day-of-week: monday
+
+        - type: weather
+          location: Jakarta, Indonesia
+          units: metric # alternatively "imperial"
+          hour-format: 12h # alternatively "24h"
+          # Optionally hide the location from being displayed in the widget
+          # hide-location: true
+        
+    - size: full
+      widgets:
+        - type: group
+          widgets:
+            - type: rss
+              limit: 10
+              collapse-after: 3
+              cache: 12h
+              feeds:
+                - url: https://selfh.st/rss/
+                  title: selfh.st
+                - url: https://bytebytego.substack.com/feed
+                  title: ByteByteGo
+                - url: https://pragmaticengineer.substack.com/feed
+                  title: Pragmatic Engineer
+                - url: https://algomaster.substack.com/feed
+                  title: AlgoMaster
+                - url: https://simonwillison.net/atom/everything/
+                  title: Simon Willison
+                - url: https://til.simonwillison.net/tils/feed.atom
+                  title: Simon Willison TILs
+                - url: https://dekontaminasi.substack.com/feed
+                  title: Dekontaminasi
+                - url: https://feeds.dzone.com/home
+                  title: DZone
+                - url: https://hellointerview.substack.com/feed
+                  title: Hello Interview
+                - url: https://highgrowthengineer.substack.com/feed
+                  title: High Growth Engineer
+                - url: https://refactoring.fm/feed
+                  title: Refactoring.fm
+                - url: https://www.architecture-weekly.com/feed
+                  title: Architecture Weekly
+                - url: https://hnrss.org/best
+                  title: Hacker News Best
+            - type: hacker-news
+
+        - type: videos
+          channels:
+            - UC0m81bQuthaQZmFbXEY9QSw # The AICode king
+            - UC14ZKB9XsDZbnHVmr4AmUpQ # PZN
+            - UC_ML5xP23TOWKUcc-oAE_Eg # Hussein Nasser
+
+        - type: group
+          widgets:
+            - type: reddit
+              subreddit: technology
+              show-thumbnails: true
+            - type: reddit
+              subreddit: selfhosted
+              show-thumbnails: true
+
+    - size: small
+      widgets:
+        - type: markets
+          markets:
+            - symbol: SPY
+              name: S&P 500
+            - symbol: BTC-USD
+              name: Bitcoin
+            - symbol: ^JKSE
+              name: IDX Composite
+            - symbol: bbca.jk
+              name: PT Bank Central Asia Tbk (BBCA.JK)
+
+        - type: server-stats
+          servers:
+            - type: local
+              name: Services
+        
+        - type: monitor
+          cache: 1m
+          title: My Services
+          sites:
+            - title: My Website
+              url: https://irfansp.dev
+            - title: My Online Resume
+              url: https://resume.irfansp.dev
+            - title: My GPT
+              url: https://gpt.irfansp.dev
+            - title: My n8n
+              url: https://n8n.irfansp.dev
+            - title: My Second Brain
+              url: https://brain.irfansp.dev
+            - title: My TILs
+              url: https://til.irfansp.dev
+
+
