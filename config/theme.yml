@@ -1,0 +1,35 @@
+theme:
+  # Default theme using a dark blue background with teal accent
+  background-color: 220 20 15
+  primary-color: 180 80 50
+  contrast-multiplier: 1.1
+
+  # Enable theme picker in the UI
+  disable-picker: false
+  
+  # Theme presets that users can switch between
+  presets:
+    dark-mode:
+      background-color: 220 20 15
+      primary-color: 180 80 50
+      positive-color: 120 70 40
+      negative-color: 0 70 50
+    
+    light-mode:
+      light: true
+      background-color: 210 20 95
+      primary-color: 200 80 40
+      positive-color: 120 70 40
+      negative-color: 0 70 50
+    
+    nord:
+      background-color: 220 16 20
+      primary-color: 210 34 45
+      positive-color: 120 40 50
+      negative-color: 0 65 60
+    
+    sunset:
+      background-color: 25 20 15
+      primary-color: 30 90 50
+      positive-color: 120 60 40
+      negative-color: 0 70 50

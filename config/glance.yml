@@ -7,10 +7,27 @@ auth:
     irfansofyana:
       password: ${USER_PASSWORD}
 
+# Custom CSS for additional styling
 theme:
+  $include: theme.yml
   # Note: assets are cached by the browser, changes to the CSS file
   # will not be reflected until the browser cache is cleared (Ctrl+F5)
   custom-css-file: /assets/user.css
+
+# Branding configuration
+branding:
+  app-name: "Irfan's Dashboard"
+  # You can add a custom logo and favicon if you have them
+  # logo-url: /assets/logo.png
+  # favicon-url: /assets/favicon.png
+  custom-footer: |
+    <p>Personal Dashboard by Irfan Sofyana Putra | Powered by <a href="https://github.com/glanceapp/glance" target="_blank">Glance</a></p>
+
+# Document customization
+document:
+  head: |
+    <meta name="description" content="Personal dashboard for Irfan Sofyana Putra">
+    <!-- You can add custom scripts or meta tags here -->
 
 pages:
   # It's not necessary to create a new file for each page and include it, you can simply

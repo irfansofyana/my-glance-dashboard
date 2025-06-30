@@ -1,16 +1,48 @@
 - name: Home
   # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
   # hide-desktop-navigation: true
+  width: wide
+  center-vertically: false
+  head-widgets:
+    - type: group
+      title: System & Services Status
+      widgets:
+        - type: server-stats
+          title: System Status
+          cache: 1m
+          servers:
+            - type: local
+              name: Services
+        - type: monitor
+          cache: 1m
+          title: My Services
+          show-response-time: true
+          sites:
+            - title: My Website
+              url: https://irfansp.dev
+            - title: My Online Resume
+              url: https://resume.irfansp.dev
+            - title: My GPT
+              url: https://gpt.irfansp.dev
+            - title: My n8n
+              url: https://n8n.irfansp.dev
+            - title: My Second Brain
+              url: https://brain.irfansp.dev
+            - title: My TILs
+              url: https://til.irfansp.dev
   columns:
     - size: small
       widgets:
         - type: search
           search-engine: https://search.irfansp.dev/search?q={QUERY}
+          title: Search
         
         - type: to-do
+          title: My Tasks
       
         - type: calendar
           first-day-of-week: monday
+          title: My Calendar
 
         - type: weather
           location: Jakarta, Indonesia
@@ -18,15 +50,19 @@
           hour-format: 12h # alternatively "24h"
           # Optionally hide the location from being displayed in the widget
           # hide-location: true
+          cache: 1h
         
     - size: full
       widgets:
         - type: group
+          title: News & Updates
           widgets:
             - type: rss
+              title: Tech & Engineering Blogs
               limit: 10
               collapse-after: 3
               cache: 12h
+              style: cards
               feeds:
                 - url: https://selfh.st/rss/
                   title: selfh.st
@@ -55,55 +91,75 @@
                 - url: https://hnrss.org/best
                   title: Hacker News Best
             - type: hacker-news
+              title: Hacker News
+              limit: 10
+              cache: 30m
 
         - type: videos
+          title: Tech Videos
+          cache: 2h
+          limit: 12
           channels:
             - UC0m81bQuthaQZmFbXEY9QSw # The AICode king
             - UC14ZKB9XsDZbnHVmr4AmUpQ # PZN
             - UC_ML5xP23TOWKUcc-oAE_Eg # Hussein Nasser
 
         - type: group
+          title: Reddit Communities
           widgets:
             - type: reddit
+              title: r/technology
               subreddit: technology
               show-thumbnails: true
+              limit: 8
+              cache: 1h
             - type: reddit
+              title: r/selfhosted
               subreddit: selfhosted
               show-thumbnails: true
+              limit: 8
+              cache: 1h
 
     - size: small
       widgets:
         - type: markets
+          title: Financial Markets
+          cache: 5m
           markets:
-            - symbol: SPY
-              name: S&P 500
+            - symbol: USDIDR=X
+              name: USD/IDR
             - symbol: BTC-USD
               name: Bitcoin
             - symbol: ^JKSE
               name: IDX Composite
+            - symbol: SPY
+              name: S&P 500
             - symbol: bbca.jk
-              name: PT Bank Central Asia Tbk (BBCA.JK)
-
-        - type: server-stats
-          servers:
-            - type: local
-              name: Services
-        
-        - type: monitor
-          cache: 1m
-          title: My Services
-          sites:
-            - title: My Website
-              url: https://irfansp.dev
-            - title: My Online Resume
-              url: https://resume.irfansp.dev
-            - title: My GPT
-              url: https://gpt.irfansp.dev
-            - title: My n8n
-              url: https://n8n.irfansp.dev
-            - title: My Second Brain
-              url: https://brain.irfansp.dev
-            - title: My TILs
-              url: https://til.irfansp.dev
-
-
+              name: Bank Central Asia
+            - symbol: bbri.jk
+              name: Bank Rakyat Indonesia
+            - symbol: bmri.jk
+              name: Bank Mandiri
+            - symbol: bnga.jk
+              name: Bank CIMB Niaga
+            - symbol: nisp.jk
+              name: Bank NISP
+            - symbol: aadi.jk
+              name: Astra Digital Indonesia
+            - symbol: asii.jk
+              name: Astra International
+            - symbol: abmm.jk
+              name: PT ABM Investama Tbk
+            - symbol: admr.jk
+              name: Adaro Minerals Indonesia Tbk
+            - symbol: adro.jk
+              name: Adaro Resources Tbk
+            - symbol: ptba.jk
+              name: Bukit Asam Tbk
+            - symbol: brms.jk
+              name: Bumi Resources Minerals Tbk.
+            - symbol: midi.jk
+              name: Midi Utama Indonesia Tbk.
+            - symbol: goto.jk
+              name: Goto Indonesia Tbk.
+        # System Status and My Services moved to head-widgets for better visibility
