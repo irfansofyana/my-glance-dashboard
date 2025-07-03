@@ -22,24 +22,31 @@
               url: https://irfansp.dev
             - title: My Online Resume
               url: https://resume.irfansp.dev
-            - title: My GPT
-              url: https://gpt.irfansp.dev
+            - title: My AI assistant
+              url: https://ai.irfansp.dev
             - title: My n8n
-              url: https://n8n.irfansp.dev
+              url: https://automate.irfansp.dev
             - title: My Second Brain
               url: https://brain.irfansp.dev
             - title: My TILs
               url: https://til.irfansp.dev
+            - title: My Bookmarks
+              url: https://linkwarden.irfansp.dev
+            - title: My SearXng
+              url: https://searxng.irfansp.dev
+            - title: My Dokploy
+              url: https://dokploy.irfansp.dev
+
   columns:
     - size: small
       widgets:
         - type: search
-          search-engine: https://search.irfansp.dev/search?q={QUERY}
+          search-engine: https://searxng.irfansp.dev/search?q={QUERY}
           title: Search
-        
+
         - type: to-do
           title: My Tasks
-      
+
         - type: calendar
           first-day-of-week: monday
           title: My Calendar
@@ -51,7 +58,7 @@
           # Optionally hide the location from being displayed in the widget
           # hide-location: true
           cache: 1h
-        
+
     - size: full
       widgets:
         - type: group
@@ -61,7 +68,7 @@
               title: Tech & Engineering Blogs
               limit: 10
               collapse-after: 3
-              cache: 12h
+              cache: 6h
               style: cards
               feeds:
                 - url: https://selfh.st/rss/
@@ -90,6 +97,14 @@
                   title: Architecture Weekly
                 - url: https://hnrss.org/best
                   title: Hacker News Best
+                - url: https://martinfowler.com/bliki/bliki.atom
+                  title: Martin Fowler
+                - url: https://devops.com/feed/
+                  title: DevOps.com
+                - url: https://aws.amazon.com/blogs/aws/feed/
+                  title: AWS Blog
+                - url: https://thenewstack.io/feed
+                  title: The New Stack
             - type: hacker-news
               title: Hacker News
               limit: 10
@@ -103,6 +118,10 @@
             - UC0m81bQuthaQZmFbXEY9QSw # The AICode king
             - UC14ZKB9XsDZbnHVmr4AmUpQ # PZN
             - UC_ML5xP23TOWKUcc-oAE_Eg # Hussein Nasser
+            - UClNlh5F6zcOD_grYOhbdezQ # Three dots lab
+            - UCPbwhExawYrn9xxI21TFfyw # The Pragmatic Engineer
+            - UC3ds0MBQZ7dBoeIG8YeddOg # Gogo
+            - UCdngmbVKX1Tgre699-XLlUA # Tech world with Nana
 
         - type: group
           title: Reddit Communities
