@@ -120,6 +120,7 @@
             - UCPbwhExawYrn9xxI21TFfyw # The Pragmatic Engineer
             - UC3ds0MBQZ7dBoeIG8YeddOg # Gogo
             - UCdngmbVKX1Tgre699-XLlUA # Tech world with Nana
+            - UCE4PyAWiZ5gdPVFxDe4lLPQ # AI Oriented dev
 
         - type: group
           title: Reddit Communities
@@ -146,7 +147,6 @@
               title: Global Markets & Crypto
               cache: 5m
               sort-by: "change"
-              chart-link-template: "https://www.tradingview.com/chart/?symbol={SYMBOL}"
               markets:
                 - symbol: USDIDR=X
                   name: USD/IDR
@@ -161,7 +161,6 @@
               title: Indonesian Banks
               cache: 5m
               sort-by: "change"
-              chart-link-template: "https://www.tradingview.com/chart/?symbol=IDX:{SYMBOL}"
               markets:
                 - symbol: bbca.jk
                   name: Bank Central Asia
@@ -175,10 +174,9 @@
                   name: Bank NISP
 
             - type: markets
-              title: Indonesian Stocks
+              title: Other Stocks
               cache: 5m
               sort-by: "change"
-              chart-link-template: "https://www.tradingview.com/chart/?symbol=IDX:{SYMBOL}"
               markets:
                 - symbol: aadi.jk
                   name: Astra Digital Indonesia
