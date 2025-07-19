@@ -139,44 +139,62 @@
 
     - size: small
       widgets:
-        - type: markets
+        - type: group
           title: Financial Markets
-          cache: 5m
-          markets:
-            - symbol: USDIDR=X
-              name: USD/IDR
-            - symbol: BTC-USD
-              name: Bitcoin
-            - symbol: ^JKSE
-              name: IDX Composite
-            - symbol: SPY
-              name: S&P 500
-            - symbol: bbca.jk
-              name: Bank Central Asia
-            - symbol: bbri.jk
-              name: Bank Rakyat Indonesia
-            - symbol: bmri.jk
-              name: Bank Mandiri
-            - symbol: bnga.jk
-              name: Bank CIMB Niaga
-            - symbol: nisp.jk
-              name: Bank NISP
-            - symbol: aadi.jk
-              name: Astra Digital Indonesia
-            - symbol: asii.jk
-              name: Astra International
-            - symbol: abmm.jk
-              name: PT ABM Investama Tbk
-            - symbol: admr.jk
-              name: Adaro Minerals Indonesia Tbk
-            - symbol: adro.jk
-              name: Adaro Resources Tbk
-            - symbol: ptba.jk
-              name: Bukit Asam Tbk
-            - symbol: brms.jk
-              name: Bumi Resources Minerals Tbk.
-            - symbol: midi.jk
-              name: Midi Utama Indonesia Tbk.
-            - symbol: goto.jk
-              name: Goto Indonesia Tbk.
-        # System Status and My Services moved to head-widgets for better visibility
+          widgets:
+            - type: markets
+              title: Global Markets & Crypto
+              cache: 5m
+              sort-by: "change"
+              chart-link-template: "https://www.tradingview.com/chart/?symbol={SYMBOL}"
+              markets:
+                - symbol: USDIDR=X
+                  name: USD/IDR
+                - symbol: BTC-USD
+                  name: Bitcoin
+                - symbol: ^JKSE
+                  name: IDX Composite
+                - symbol: SPY
+                  name: S&P 500
+
+            - type: markets
+              title: Indonesian Banks
+              cache: 5m
+              sort-by: "change"
+              chart-link-template: "https://www.tradingview.com/chart/?symbol=IDX:{SYMBOL}"
+              markets:
+                - symbol: bbca.jk
+                  name: Bank Central Asia
+                - symbol: bbri.jk
+                  name: Bank Rakyat Indonesia
+                - symbol: bmri.jk
+                  name: Bank Mandiri
+                - symbol: bnga.jk
+                  name: Bank CIMB Niaga
+                - symbol: nisp.jk
+                  name: Bank NISP
+
+            - type: markets
+              title: Indonesian Stocks
+              cache: 5m
+              sort-by: "change"
+              chart-link-template: "https://www.tradingview.com/chart/?symbol=IDX:{SYMBOL}"
+              markets:
+                - symbol: aadi.jk
+                  name: Astra Digital Indonesia
+                - symbol: asii.jk
+                  name: Astra International
+                - symbol: abmm.jk
+                  name: PT ABM Investama Tbk
+                - symbol: admr.jk
+                  name: Adaro Minerals Indonesia Tbk
+                - symbol: adro.jk
+                  name: Adaro Resources Tbk
+                - symbol: ptba.jk
+                  name: Bukit Asam Tbk
+                - symbol: brms.jk
+                  name: Bumi Resources Minerals Tbk.
+                - symbol: midi.jk
+                  name: Midi Utama Indonesia Tbk.
+                - symbol: goto.jk
+                  name: Goto Indonesia Tbk.
