@@ -45,7 +45,20 @@
           title: Search
 
         - type: to-do
-          title: My Tasks
+          title: Today's Tasks
+          cache: 1m
+
+        - type: iframe
+          title: Focus Timer
+          source: https://pomofocus.io
+          height: 400
+
+        - type: clock
+          title: Current Time
+          hour-format: 12h
+          timezones:
+            - timezone: Asia/Jakarta
+              label: Jakarta
 
         - type: calendar
           first-day-of-week: monday

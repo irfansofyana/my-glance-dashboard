@@ -1,0 +1,19 @@
+- name: Tools
+  width: wide
+  center-vertically: false
+  columns:
+    - size: full
+      widgets:
+        - type: iframe
+          title: Developer Tools Collection
+          source: https://devtools.irfansp.dev/
+          height: 600
+
+    - size: full
+      widgets:
+        - type: iframe
+          title: Digital Whiteboard
+          source: https://excalidraw.com
+          height: 600
+          # Optional: You can also use a self-hosted Excalidraw instance
+          # source: https://your-excalidraw-instance.com
